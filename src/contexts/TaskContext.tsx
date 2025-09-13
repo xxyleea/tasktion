@@ -305,6 +305,14 @@ export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       return tasks;
     }
 
+    // Built-in 'urgent' category: filter for priority === 'urgent'
+    if (currentCategory === 'urgent') {
+      return tasks.filter(task => {
+        const p = task.properties?.priority;
+        return typeof p === 'string' && p.toLowerCase() === 'urgent';
+      });
+    }
+
     const category = categories.find(c => c.id === currentCategory);
     if (!category?.filter.propertyId) {
       return tasks;

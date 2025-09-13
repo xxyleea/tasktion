@@ -6,24 +6,26 @@
         "dueDate": "2025-09-15",
         "tags": [
           "school"
-        ]
+        ],
+        "priority": "Urgent"
       },
       "completed": false,
       "id": "1757778011314",
       "createdAt": "2025-09-13T15:40:11.314Z",
-      "updatedAt": "2025-09-13T15:48:06.731Z"
+      "updatedAt": "2025-09-13T16:50:32.273Z"
     },
     {
       "title": "study for bio ft",
       "properties": {
         "tags": [
           "school"
-        ]
+        ],
+        "priority": "Urgent"
       },
       "completed": false,
       "id": "1757778773529",
       "createdAt": "2025-09-13T15:52:53.529Z",
-      "updatedAt": "2025-09-13T15:53:54.923Z"
+      "updatedAt": "2025-09-13T19:28:09.867Z"
     },
     {
       "title": "wuwa grind",
@@ -38,12 +40,350 @@
       "properties": {
         "tags": [
           "school"
-        ]
+        ],
+        "priority": "Urgent"
       },
       "completed": false,
       "id": "1757779754371",
       "createdAt": "2025-09-13T16:09:14.371Z",
-      "updatedAt": "2025-09-13T16:09:16.689Z"
+      "updatedAt": "2025-09-13T19:28:15.392Z"
+    },
+    {
+      "title": "study for chinese quiz",
+      "properties": {
+        "tags": [
+          "school"
+        ],
+        "priority": "Urgent"
+      },
+      "completed": false,
+      "id": "1757791266784",
+      "createdAt": "2025-09-13T19:21:06.784Z",
+      "updatedAt": "2025-09-13T19:28:20.577Z"
+    },
+    {
+      "title": "SES application",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757791735132",
+      "createdAt": "2025-09-13T19:28:55.132Z",
+      "updatedAt": "2025-09-13T19:29:20.853Z"
+    },
+    {
+      "title": "US",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757791794672",
+      "createdAt": "2025-09-13T19:29:54.672Z",
+      "updatedAt": "2025-09-13T19:29:56.090Z"
+    },
+    {
+      "title": "Stanford",
+      "parentId": "1757791794672",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757791796235",
+      "createdAt": "2025-09-13T19:29:56.235Z",
+      "updatedAt": "2025-09-13T19:29:57.780Z"
+    },
+    {
+      "title": "Berkley",
+      "parentId": "1757791794672",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757791810416",
+      "createdAt": "2025-09-13T19:30:10.416Z",
+      "updatedAt": "2025-09-13T19:30:11.506Z"
+    },
+    {
+      "title": "Dartmouth",
+      "parentId": "1757791794672",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757791811703",
+      "createdAt": "2025-09-13T19:30:11.703Z",
+      "updatedAt": "2025-09-13T19:30:13.216Z"
+    },
+    {
+      "title": "UK",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757791813437",
+      "createdAt": "2025-09-13T19:30:13.437Z",
+      "updatedAt": "2025-09-13T19:30:16.921Z"
+    },
+    {
+      "title": "UCAS personal statement fix",
+      "parentId": "1757791813437",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": true,
+      "id": "1757791817513",
+      "createdAt": "2025-09-13T19:30:17.513Z",
+      "updatedAt": "2025-09-13T19:30:24.380Z"
+    },
+    {
+      "title": "finish UCAS application",
+      "parentId": "1757791813437",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757791935701",
+      "createdAt": "2025-09-13T19:32:15.701Z",
+      "updatedAt": "2025-09-13T19:33:16.604Z"
+    },
+    {
+      "title": "HK",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757791996755",
+      "createdAt": "2025-09-13T19:33:16.755Z",
+      "updatedAt": "2025-09-13T19:33:19.556Z"
+    },
+    {
+      "title": "PolyU",
+      "parentId": "1757791996755",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757792000036",
+      "createdAt": "2025-09-13T19:33:20.036Z",
+      "updatedAt": "2025-09-13T19:33:27.994Z"
+    },
+    {
+      "title": "HKU",
+      "parentId": "1757791996755",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757792008291",
+      "createdAt": "2025-09-13T19:33:28.291Z",
+      "updatedAt": "2025-09-13T19:33:28.929Z"
+    },
+    {
+      "title": "CU",
+      "parentId": "1757791996755",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757792009284",
+      "createdAt": "2025-09-13T19:33:29.284Z",
+      "updatedAt": "2025-09-13T19:33:30.011Z"
+    },
+    {
+      "title": "HKUST",
+      "parentId": "1757791996755",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757792010387",
+      "createdAt": "2025-09-13T19:33:30.387Z",
+      "updatedAt": "2025-09-13T19:33:39.686Z"
+    },
+    {
+      "title": "Australia",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757792036631",
+      "createdAt": "2025-09-13T19:33:56.631Z",
+      "updatedAt": "2025-09-13T19:34:08.989Z"
+    },
+    {
+      "title": "UNSW",
+      "parentId": "1757792036631",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757792044024",
+      "createdAt": "2025-09-13T19:34:04.024Z",
+      "updatedAt": "2025-09-13T19:34:16.235Z"
+    },
+    {
+      "title": "email them to ask if i can use predicted",
+      "parentId": "1757792044024",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757792058903",
+      "createdAt": "2025-09-13T19:34:18.903Z",
+      "updatedAt": "2025-09-13T19:34:24.562Z"
+    },
+    {
+      "title": "figure out scholarship",
+      "parentId": "1757792044024",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": false,
+      "id": "1757792064693",
+      "createdAt": "2025-09-13T19:34:24.693Z",
+      "updatedAt": "2025-09-13T19:34:27.343Z"
+    },
+    {
+      "title": "revamp my notion",
+      "properties": {
+        "tags": [
+          "personal"
+        ]
+      },
+      "completed": false,
+      "id": "1757792230425",
+      "createdAt": "2025-09-13T19:37:10.425Z",
+      "updatedAt": "2025-09-13T19:37:31.659Z"
+    },
+    {
+      "title": "finances",
+      "properties": {
+        "tags": [
+          "personal"
+        ]
+      },
+      "completed": false,
+      "id": "1757792295848",
+      "createdAt": "2025-09-13T19:38:15.848Z",
+      "updatedAt": "2025-09-13T19:38:23.619Z"
+    },
+    {
+      "title": "shopping list",
+      "properties": {
+        "tags": [
+          "personal"
+        ]
+      },
+      "completed": false,
+      "id": "1757792297782",
+      "createdAt": "2025-09-13T19:38:17.782Z",
+      "updatedAt": "2025-09-13T19:38:25.958Z"
+    },
+    {
+      "title": "iphone fix",
+      "properties": {
+        "tags": [
+          "personal"
+        ]
+      },
+      "completed": false,
+      "id": "1757792306458",
+      "createdAt": "2025-09-13T19:38:26.458Z",
+      "updatedAt": "2025-09-13T19:38:28.632Z"
+    },
+    {
+      "title": "laptop fix",
+      "properties": {
+        "tags": [
+          "personal"
+        ]
+      },
+      "completed": false,
+      "id": "1757792308749",
+      "createdAt": "2025-09-13T19:38:28.749Z",
+      "updatedAt": "2025-09-13T19:38:29.858Z"
+    },
+    {
+      "title": "ipad fix",
+      "properties": {
+        "tags": [
+          "personal"
+        ]
+      },
+      "completed": false,
+      "id": "1757792310149",
+      "createdAt": "2025-09-13T19:38:30.149Z",
+      "updatedAt": "2025-09-13T19:38:31.429Z"
+    },
+    {
+      "title": "clean my room </3",
+      "properties": {
+        "tags": [
+          "personal"
+        ]
+      },
+      "completed": false,
+      "id": "1757792311559",
+      "createdAt": "2025-09-13T19:38:31.559Z",
+      "updatedAt": "2025-09-13T19:38:35.214Z"
+    },
+    {
+      "title": "tasktion",
+      "properties": {
+        "tags": [
+          "projects"
+        ]
+      },
+      "completed": false,
+      "id": "1757792539488",
+      "createdAt": "2025-09-13T19:42:19.488Z",
+      "updatedAt": "2025-09-13T19:42:34.180Z"
+    },
+    {
+      "title": "coursera",
+      "properties": {
+        "tags": [
+          "projects"
+        ]
+      },
+      "completed": false,
+      "id": "1757792651126",
+      "createdAt": "2025-09-13T19:44:11.126Z",
+      "updatedAt": "2025-09-13T19:44:12.157Z"
     }
   ],
   "categories": [
@@ -55,6 +395,33 @@
         "value": "school"
       },
       "id": "1757779544246"
+    },
+    {
+      "name": "uni",
+      "icon": "Folder",
+      "filter": {
+        "propertyId": "tags",
+        "value": "uni apps"
+      },
+      "id": "1757791788767"
+    },
+    {
+      "name": "personal",
+      "icon": "Heart",
+      "filter": {
+        "propertyId": "tags",
+        "value": "personal"
+      },
+      "id": "1757792292837"
+    },
+    {
+      "name": "projects",
+      "icon": "Star",
+      "filter": {
+        "propertyId": "tags",
+        "value": "projects"
+      },
+      "id": "1757792577443"
     }
   ]
 }

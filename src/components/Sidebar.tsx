@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import { Switch } from "./ui/switch";
 import { 
   List, 
@@ -28,7 +28,8 @@ const DarkModeToggle: React.FC = () => {
     if (typeof window === 'undefined') return false;
     const stored = localStorage.getItem('theme');
     if (stored) return stored === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Default to light mode if no preference is set
+    return false;
   };
   const [enabled, setEnabled] = React.useState(getInitial);
 
@@ -264,6 +265,32 @@ export const Sidebar: React.FC = () => {
                 {getTaskCount('all')}
               </Badge>
             )}
+          </Button>
+
+          {/* Urgent Tasks button (acts as a built-in category) */}
+          <Button
+            key="urgent"
+            variant={currentCategory === 'urgent' ? "secondary" : "ghost"}
+            className="w-full justify-between text-sidebar-foreground hover:bg-sidebar-accent"
+            onClick={() => {
+              setCurrentCategory('urgent');
+              setCurrentView('list');
+            }}
+          >
+            <div className="flex items-center">
+              <Star className="h-4 w-4" />
+              <span className="ml-2">Urgent</span>
+            </div>
+            {(() => {
+              // Count tasks with priority 'urgent'
+              const count = tasks.filter(task => {
+                if (task.completed) return false;
+                return task.properties?.priority === 'urgent';
+              }).length;
+              return count > 0 ? (
+                <Badge variant="secondary" className="ml-auto text-xs">{count}</Badge>
+              ) : null;
+            })()}
           </Button>
           {categories.map((category) => {
             const taskCount = getTaskCount(category.id);

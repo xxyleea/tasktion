@@ -20,13 +20,20 @@ export const TaskList: React.FC = () => {
     typeof currentCategoryObj.filter.value === 'string'
       ? currentCategoryObj.filter.value
       : undefined;
+
+  // Show correct header for built-in categories
+  let currentCategoryName = 'All Tasks';
+  if (currentCategory === 'urgent') {
+    currentCategoryName = 'Urgent';
+  } else if (currentCategoryObj) {
+    currentCategoryName = currentCategoryObj.name;
+  }
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('createdAt');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [focusedTaskId, setFocusedTaskId] = useState<string | null>(null);
   const taskRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
-  const currentCategoryName = categories.find(c => c.id === currentCategory)?.name || 'All Tasks';
 
   // Get flat list of tasks for document-style editing - preserving flat array order
   const getFlatTaskList = (): { task: Task; level: number }[] => {
