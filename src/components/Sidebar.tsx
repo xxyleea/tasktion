@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Switch } from "./ui/switch";
 import { 
   List, 
   Calendar, 
@@ -19,6 +20,33 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { ViewMode } from '../types';
 import { AVAILABLE_ICONS, getIconComponent } from './IconSelector';
+
+// --- Dark mode toggle component ---
+const DarkModeToggle: React.FC = () => {
+  // Check initial mode from localStorage or system preference
+  const getInitial = () => {
+    if (typeof window === 'undefined') return false;
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored === 'dark';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  };
+  const [enabled, setEnabled] = React.useState(getInitial);
+
+  React.useEffect(() => {
+    const html = document.documentElement;
+    if (enabled) {
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      html.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [enabled]);
+
+  return (
+    <Switch checked={enabled} onCheckedChange={setEnabled} />
+  );
+}
 
 export const Sidebar: React.FC = () => {
   const { 
@@ -265,7 +293,12 @@ export const Sidebar: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <div className="p-4 border-t space-y-1">
+      <div className="p-4 border-t space-y-2">
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-sidebar-foreground/70">Dark Mode</span>
+          {/* Dark mode toggle switch */}
+          <DarkModeToggle />
+        </div>
         <Button 
           variant="ghost" 
           className="w-full justify-start text-sidebar-foreground hover:bg-sidebar-accent"
