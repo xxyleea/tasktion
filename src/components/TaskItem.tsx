@@ -159,7 +159,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({
       {/* Checkbox */}
       <Checkbox
         checked={task.completed}
-        onCheckedChange={(checked) => 
+        onCheckedChange={(checked: boolean | "indeterminate") => 
           updateTask(task.id, { completed: Boolean(checked) })
         }
         className="shrink-0"
@@ -237,7 +237,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({
                   <label className="text-xs font-medium">Status</label>
                   <Select
                     value={task.properties.status || ''}
-                    onValueChange={(value) => handlePropertyChange('status', value)}
+                    onValueChange={(value: string) => handlePropertyChange('status', value)}
                   >
                     <SelectTrigger className="h-8">
                       <SelectValue placeholder="Select status" />
@@ -255,7 +255,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({
                   <label className="text-xs font-medium">Priority</label>
                   <Select
                     value={task.properties.priority || ''}
-                    onValueChange={(value) => handlePropertyChange('priority', value)}
+                    onValueChange={(value: string) => handlePropertyChange('priority', value)}
                   >
                     <SelectTrigger className="h-8">
                       <SelectValue placeholder="Select priority" />
@@ -306,14 +306,14 @@ export const TaskItem: React.FC<TaskItemProps> = ({
                             <DropdownMenuItem
                               key={tag}
                               className="flex items-center justify-between text-xs"
-                              onSelect={(e) => e.preventDefault()}
+                              onSelect={(e: React.SyntheticEvent) => e.preventDefault()}
                             >
                               <span className="flex-1">{tag}</span>
                               <Button
                                 variant="ghost"
                                 size="sm"
                                 className="h-5 w-5 p-0 text-destructive hover:text-destructive hover:bg-destructive/10"
-                                onClick={(e) => {
+                                onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
                                   e.stopPropagation();
                                   deleteTagOption(tag);
                                 }}
@@ -381,9 +381,9 @@ export const TaskItem: React.FC<TaskItemProps> = ({
                                 <Button 
                                   size="sm" 
                                   className="w-full text-xs"
-                                  onClick={() => {
+                                  onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+                                    e.preventDefault();
                                     handleCreateNewTag();
-                                    setShowTagsPopover(false);
                                   }}
                                 >
                                   Create "{tagSearchTerm.trim()}"

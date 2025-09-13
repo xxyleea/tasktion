@@ -158,7 +158,9 @@ export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
               isDescendant = true;
               break;
             }
-            checkTask = updatedTasks.find(t => t.id === checkTask.parentId) || { parentId: undefined };
+            const foundTask = updatedTasks.find(t => t.id === checkTask.parentId);
+            if (!foundTask) break;
+            checkTask = foundTask;
           }
           
           if (!isDescendant) {
