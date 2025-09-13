@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useState, ReactNode, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import type { ReactNode } from 'react';
 import { Task, TaskProperty, Category, ViewMode } from '../types';
 import { storage, StorageData } from '../utils/storage';
+import { api } from '../utils/api';
 
 interface TaskContextType {
   user: { name: string; email: string };
@@ -55,36 +57,30 @@ export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [isLoading, setIsLoading] = useState(true);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
 
-  // Load data on component mount
+  // Load tasks from backend on mount
+
   useEffect(() => {
     const loadData = async () => {
       try {
         setIsLoading(true);
-        const data = storage.loadData();
-        
-        // Parse dates back from ISO strings
-        const tasksWithDates = data.tasks.map(task => ({
+        const [tasks, categories] = await Promise.all([
+          api.getTasks(),
+          api.getCategories()
+        ]);
+        console.log('[TaskContext] Loaded tasks from backend:', tasks);
+        console.log('[TaskContext] Loaded categories from backend:', categories);
+        setTasks(tasks.map((task: any) => ({
           ...task,
           createdAt: new Date(task.createdAt),
           updatedAt: new Date(task.updatedAt)
-        }));
-
-        setUser(data.user);
-        setTasks(tasksWithDates);
-        setProperties(data.properties);
-        setCategories(data.categories);
-        setCurrentView(data.currentView as ViewMode);
-        setCurrentCategory(data.currentCategory);
-        setLastSaved(new Date(data.lastModified));
-        
-        console.log('Data loaded successfully');
+        })));
+        setCategories(categories);
       } catch (error) {
-        console.error('Failed to load data:', error);
+        console.error('[TaskContext] Failed to load tasks or categories from backend:', error);
       } finally {
         setIsLoading(false);
       }
     };
-
     loadData();
   }, []);
 
@@ -117,10 +113,8 @@ export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       createdAt: new Date(),
       updatedAt: new Date()
     };
-    
-    const updatedTasks = [...tasks, task];
-    setTasks(updatedTasks);
-    autoSave({ tasks: updatedTasks });
+    setTasks(prev => [...prev, task]);
+    api.saveTask(task);
     return task;
   };
 
@@ -181,35 +175,36 @@ export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const updateTask = (id: string, updates: Partial<Task>) => {
-    const updatedTasks = tasks.map(task =>
-      task.id === id
-        ? { ...task, ...updates, updatedAt: new Date() }
-        : task
-    );
-    setTasks(updatedTasks);
-    autoSave({ tasks: updatedTasks });
+    setTasks(prev => {
+      const updatedTasks = prev.map(task =>
+        task.id === id
+          ? { ...task, ...updates, updatedAt: new Date() }
+          : task
+      );
+      const updatedTask = updatedTasks.find(t => t.id === id);
+      if (updatedTask) api.saveTask(updatedTask);
+      return updatedTasks;
+    });
   };
 
   const deleteTask = (id: string) => {
-    const updatedTasks = [...tasks];
-    
-    // Find all descendants to delete
-    const toDelete = new Set([id]);
-    let foundNew = true;
-    
-    while (foundNew) {
-      foundNew = false;
-      updatedTasks.forEach(task => {
-        if (task.parentId && toDelete.has(task.parentId) && !toDelete.has(task.id)) {
-          toDelete.add(task.id);
-          foundNew = true;
-        }
-      });
-    }
-    
-    const filteredTasks = updatedTasks.filter(task => !toDelete.has(task.id));
-    setTasks(filteredTasks);
-    autoSave({ tasks: filteredTasks });
+    setTasks(prev => {
+      // Find all descendants to delete
+      const toDelete = new Set([id]);
+      let foundNew = true;
+      while (foundNew) {
+        foundNew = false;
+        prev.forEach(task => {
+          if (task.parentId && toDelete.has(task.parentId) && !toDelete.has(task.id)) {
+            toDelete.add(task.id);
+            foundNew = true;
+          }
+        });
+      }
+      const filteredTasks = prev.filter(task => !toDelete.has(task.id));
+      api.deleteTask(id);
+      return filteredTasks;
+    });
   };
 
   const addProperty = (newProperty: Omit<TaskProperty, 'id'>) => {
@@ -231,12 +226,9 @@ export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const addTagOption = (newTag: string) => {
-    const tagsProperty = properties.find(p => p.id === 'tags');
-    if (tagsProperty && !tagsProperty.options?.includes(newTag)) {
-      updateProperty('tags', {
-        options: [...(tagsProperty.options || []), newTag]
-      });
-    }
+    // No longer update static property; tags are now dynamic from tasks
+    // This function is kept for compatibility, but does nothing now
+    // Tag will be added to the task directly in handleAddTag in TaskItem
   };
 
   const deleteTagOption = (tagToDelete: string) => {
@@ -274,7 +266,7 @@ export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     };
     const updatedCategories = [...categories, category];
     setCategories(updatedCategories);
-    autoSave({ categories: updatedCategories });
+    api.saveCategory(category);
   };
 
   const handleSetCurrentView = (view: ViewMode) => {
@@ -298,8 +290,14 @@ export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   const getAllAvailableTagOptions = (): string[] => {
-    const tagsProperty = properties.find(p => p.id === 'tags');
-    return tagsProperty?.options || [];
+    // Return all unique tags from tasks
+    const allTags = new Set<string>();
+    tasks.forEach(task => {
+      if (task.properties.tags && Array.isArray(task.properties.tags)) {
+        task.properties.tags.forEach((tag: string) => allTags.add(tag));
+      }
+    });
+    return Array.from(allTags);
   };
 
   const getFilteredTasks = (): Task[] => {

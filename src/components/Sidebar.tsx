@@ -217,6 +217,26 @@ export const Sidebar: React.FC = () => {
           </Dialog>
         </div>
         <div className="space-y-1">
+          {/* All Tasks button */}
+          <Button
+            key="all"
+            variant={currentCategory === 'all' ? "secondary" : "ghost"}
+            className="w-full justify-between text-sidebar-foreground hover:bg-sidebar-accent"
+            onClick={() => {
+              setCurrentCategory('all');
+              setCurrentView('list');
+            }}
+          >
+            <div className="flex items-center">
+              <Inbox className="h-4 w-4" />
+              <span className="ml-2">All Tasks</span>
+            </div>
+            {getTaskCount('all') > 0 && (
+              <Badge variant="secondary" className="ml-auto text-xs">
+                {getTaskCount('all')}
+              </Badge>
+            )}
+          </Button>
           {categories.map((category) => {
             const taskCount = getTaskCount(category.id);
             return (

@@ -10,6 +10,16 @@ import { Button } from './ui/button';
 
 export const TaskList: React.FC = () => {
   const { tasks, addTask, addTaskAfter, deleteTask, updateTask, getTaskTree, currentCategory, categories } = useTaskContext();
+
+  // Helper: get default tag for current category (if tag-filtered)
+  const currentCategoryObj = categories.find(c => c.id === currentCategory);
+  const defaultTag =
+    currentCategoryObj &&
+    currentCategoryObj.filter &&
+    currentCategoryObj.filter.propertyId === 'tags' &&
+    typeof currentCategoryObj.filter.value === 'string'
+      ? currentCategoryObj.filter.value
+      : undefined;
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('createdAt');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
@@ -90,20 +100,20 @@ export const TaskList: React.FC = () => {
   const taskList = filteredAndSortedTasks();
 
   const handleCreateTaskAfter = useCallback((afterTaskId: string, title: string = '', parentId?: string) => {
+    const properties: Record<string, any> = {};
+    if (defaultTag) properties.tags = [defaultTag];
     const newTask = addTaskAfter({
       title: title || '',
       parentId,
-      properties: {},
+      properties,
       completed: false
     }, afterTaskId);
-    
     // Focus the new task after a brief delay to ensure DOM updates
     setTimeout(() => {
       setFocusedTaskId(newTask.id);
     }, 0);
-    
     return newTask;
-  }, [addTaskAfter]);
+  }, [addTaskAfter, defaultTag]);
 
   const handleDeleteTask = useCallback((taskId: string) => {
     const taskIndex = taskList.findIndex(({ task }) => task.id === taskId);
@@ -272,12 +282,14 @@ export const TaskList: React.FC = () => {
           
           {/* Empty state or add first task */}
           {taskList.length === 0 && (
-            <div 
+            <div
               className="flex items-center gap-2 py-2 cursor-text text-muted-foreground/60"
               onClick={() => {
+                const properties: Record<string, any> = {};
+                if (defaultTag) properties.tags = [defaultTag];
                 const newTask = addTask({
                   title: '',
-                  properties: {},
+                  properties,
                   completed: false
                 });
                 setTimeout(() => {

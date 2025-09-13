@@ -40,8 +40,9 @@ export const CalendarView: React.FC = () => {
 
   const getTasksForDate = (date: Date | null) => {
     if (!date) return [];
-    
-    const dateString = date.toISOString().split('T')[0];
+    // Use local date string (YYYY-MM-DD) to avoid timezone bugs
+    const pad = (n: number) => n.toString().padStart(2, '0');
+    const dateString = `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
     return tasks.filter(task => {
       const taskDate = task.properties.dueDate;
       return taskDate === dateString;

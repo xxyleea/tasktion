@@ -1,0 +1,60 @@
+{
+  "tasks": [
+    {
+      "title": "homework on capacitors",
+      "properties": {
+        "dueDate": "2025-09-15",
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1757778011314",
+      "createdAt": "2025-09-13T15:40:11.314Z",
+      "updatedAt": "2025-09-13T15:48:06.731Z"
+    },
+    {
+      "title": "study for bio ft",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1757778773529",
+      "createdAt": "2025-09-13T15:52:53.529Z",
+      "updatedAt": "2025-09-13T15:53:54.923Z"
+    },
+    {
+      "title": "wuwa grind",
+      "properties": {},
+      "completed": false,
+      "id": "1757779552562",
+      "createdAt": "2025-09-13T16:05:52.562Z",
+      "updatedAt": "2025-09-13T16:05:55.818Z"
+    },
+    {
+      "title": "study for math quiz",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1757779754371",
+      "createdAt": "2025-09-13T16:09:14.371Z",
+      "updatedAt": "2025-09-13T16:09:16.689Z"
+    }
+  ],
+  "categories": [
+    {
+      "name": "school",
+      "icon": "Book",
+      "filter": {
+        "propertyId": "tags",
+        "value": "school"
+      },
+      "id": "1757779544246"
+    }
+  ]
+}

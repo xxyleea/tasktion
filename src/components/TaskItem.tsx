@@ -1,4 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+import { APP_TIMEZONE } from '../config';
+dayjs.extend(utc);
+dayjs.extend(timezone);
 import { Task } from '../types';
 import { useTaskContext } from '../contexts/TaskContext';
 import { Button } from './ui/button';
@@ -54,10 +60,14 @@ export const TaskItem: React.FC<TaskItemProps> = ({
   // Handle auto-focus
   useEffect(() => {
     if (isAutoFocused && inputRef.current) {
+      console.log('[TaskItem] Auto-focus effect running for task', task.id, 'inputRef:', inputRef.current);
       const timeoutId = setTimeout(() => {
         if (inputRef.current) {
+          console.log('[TaskItem] Focusing input for task', task.id);
           inputRef.current.focus();
           inputRef.current.setSelectionRange(editTitle.length, editTitle.length);
+        } else {
+          console.log('[TaskItem] Input ref missing for task', task.id);
         }
       }, 0);
       return () => clearTimeout(timeoutId);
@@ -199,7 +209,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({
         {task.properties.dueDate && (
           <Badge variant="outline" className="text-xs flex items-center gap-1">
             <Calendar className="h-3 w-3" />
-            {new Date(task.properties.dueDate).toLocaleDateString()}
+            {task.properties.dueDate}
           </Badge>
         )}
 
