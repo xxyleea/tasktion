@@ -56,5 +56,8 @@
     server: {
       port: 3000,
       open: true,
+      allowedHosts: [
+        'unmobile-sharda-unfluorescent.ngrok-free.app'
+      ],
     },
   });
