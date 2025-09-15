@@ -7,9 +7,10 @@ import { Card, CardContent, CardHeader } from './ui/card';
 import { Checkbox } from './ui/checkbox';
 import { Separator } from './ui/separator';
 import { ChevronLeft, ChevronRight, Calendar, Tag, Clock } from 'lucide-react';
+import { TaskItem } from './TaskItem';
 
 export const CalendarView: React.FC = () => {
-  const { getFilteredTasks, updateTask } = useTaskContext();
+  const { getFilteredTasks, updateTask, addTask, deleteTask } = useTaskContext();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
 
@@ -84,49 +85,46 @@ export const CalendarView: React.FC = () => {
     return date.getMonth() === currentDate.getMonth();
   };
 
-  const TaskItemDetailed: React.FC<{ task: Task }> = ({ task }) => (
-    <Card className="mb-3">
-      <CardContent className="p-4">
-        <div className="flex items-start gap-3">
-          <Checkbox
-            checked={task.completed}
-            onCheckedChange={(checked) => 
-              updateTask(task.id, { completed: Boolean(checked) })
-            }
-            className="mt-0.5"
-          />
-          <div className="flex-1">
-            <h3 className={`font-medium ${task.completed ? 'line-through text-muted-foreground' : ''}`}>
-              {task.title}
-            </h3>
-            {task.description && (
-              <p className="text-sm text-muted-foreground mt-1">{task.description}</p>
-            )}
-            <div className="flex flex-wrap gap-2 mt-2">
-              {task.properties.priority && (
-                <Badge variant="secondary" className={`text-xs ${getPriorityColor(task.properties.priority)}`}>
-                  {task.properties.priority}
-                </Badge>
-              )}
-              {task.properties.status && (
-                <Badge variant="outline" className="text-xs">
-                  {task.properties.status}
-                </Badge>
-              )}
-              {task.properties.tags && Array.isArray(task.properties.tags) && (
-                task.properties.tags.map((tag: string) => (
-                  <Badge key={tag} variant="outline" className="text-xs flex items-center gap-1">
-                    <Tag className="h-3 w-3" />
-                    {tag}
-                  </Badge>
-                ))
-              )}
-            </div>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  );
+  // Inline editing: use TaskItem for selected date tasks
+  // Add task creation logic for selected date
+  const [autoFocusTaskId, setAutoFocusTaskId] = useState<string | null>(null);
+  const taskRefs = React.useRef<{ [id: string]: HTMLInputElement | null }>({});
+
+  // Not used in calendar view (no subtask/indentation)
+  const handleCreateTaskAfter = (afterTaskId: string, title?: string, parentId?: string) => {
+    // Instead, just add a new task for the selected date
+    if (!selectedDate) throw new Error('No date selected');
+    const pad = (n: number) => n.toString().padStart(2, '0');
+    const dateString = `${selectedDate.getFullYear()}-${pad(selectedDate.getMonth() + 1)}-${pad(selectedDate.getDate())}`;
+    const newTask = addTask({
+      title: title || '',
+      completed: false,
+      properties: { dueDate: dateString },
+    });
+    setAutoFocusTaskId(newTask.id);
+    return newTask;
+  };
+  const handleDeleteTask = (taskId: string) => {
+    deleteTask(taskId);
+  };
+  const handleIndentTask = () => {};
+  const handleUnindentTask = () => {};
+  const handleArrowNavigation = () => {};
+  const registerRef = (taskId: string, ref: HTMLInputElement | null) => {
+    taskRefs.current[taskId] = ref;
+  };
+
+  const handleAddTaskForDate = () => {
+    if (!selectedDate) return;
+    const pad = (n: number) => n.toString().padStart(2, '0');
+    const dateString = `${selectedDate.getFullYear()}-${pad(selectedDate.getMonth() + 1)}-${pad(selectedDate.getDate())}`;
+    const newTask = addTask({
+      title: '',
+      completed: false,
+      properties: { dueDate: dateString },
+    });
+    setAutoFocusTaskId(newTask.id);
+  };
 
   const days = getDaysInMonth(currentDate);
   const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -241,21 +239,39 @@ export const CalendarView: React.FC = () => {
         </div>
 
         {selectedDate ? (
-          selectedDateTasks.length > 0 ? (
-            <div className="space-y-0">
-              {selectedDateTasks.map((task) => (
-                <TaskItemDetailed key={task.id} task={task} />
-              ))}
+          <>
+            <div className="flex justify-end mb-2">
+              <Button size="sm" variant="outline" onClick={handleAddTaskForDate}>
+                + Add Task
+              </Button>
             </div>
-          ) : (
-            <div className="text-center py-12">
-              <Clock className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-lg font-medium text-muted-foreground mb-2">No tasks due</h3>
-              <p className="text-sm text-muted-foreground">
-                No tasks are scheduled for this date.
-              </p>
-            </div>
-          )
+            {selectedDateTasks.length > 0 ? (
+              <div className="space-y-0">
+                {selectedDateTasks.map((task) => (
+                  <TaskItem
+                    key={task.id}
+                    task={task}
+                    level={0}
+                    onCreateTaskAfter={handleCreateTaskAfter}
+                    onDeleteTask={handleDeleteTask}
+                    onIndentTask={handleIndentTask}
+                    onUnindentTask={handleUnindentTask}
+                    onArrowNavigation={handleArrowNavigation}
+                    registerRef={registerRef}
+                    isAutoFocused={autoFocusTaskId === task.id}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <Clock className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                <h3 className="text-lg font-medium text-muted-foreground mb-2">No tasks due</h3>
+                <p className="text-sm text-muted-foreground">
+                  No tasks are scheduled for this date.
+                </p>
+              </div>
+            )}
+          </>
         ) : (
           <div className="text-center py-12">
             <Calendar className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
@@ -278,7 +294,18 @@ export const CalendarView: React.FC = () => {
                     .filter(task => !task.properties.dueDate)
                     .slice(0, 5)
                     .map((task) => (
-                      <TaskItemDetailed key={task.id} task={task} />
+                      <TaskItem
+                        key={task.id}
+                        task={task}
+                        level={0}
+                        onCreateTaskAfter={handleCreateTaskAfter}
+                        onDeleteTask={handleDeleteTask}
+                        onIndentTask={handleIndentTask}
+                        onUnindentTask={handleUnindentTask}
+                        onArrowNavigation={handleArrowNavigation}
+                        registerRef={registerRef}
+                        isAutoFocused={autoFocusTaskId === task.id}
+                      />
                     ))}
                   {tasks.filter(task => !task.properties.dueDate).length > 5 && (
                     <p className="text-sm text-muted-foreground text-center py-2">
