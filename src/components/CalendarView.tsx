@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight, Calendar, Tag, Clock } from 'lucide-react';
 import { TaskItem } from './TaskItem';
 
 export const CalendarView: React.FC = () => {
-  const { getFilteredTasks, updateTask, addTask, deleteTask } = useTaskContext();
+  const { getFilteredTasks, updateTask, addTask, deleteTask, currentCategory, categories } = useTaskContext();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
 
@@ -118,10 +118,23 @@ export const CalendarView: React.FC = () => {
     if (!selectedDate) return;
     const pad = (n: number) => n.toString().padStart(2, '0');
     const dateString = `${selectedDate.getFullYear()}-${pad(selectedDate.getMonth() + 1)}-${pad(selectedDate.getDate())}`;
+    let properties: Record<string, any> = { dueDate: dateString };
+    if (currentCategory && currentCategory !== 'all') {
+      const categoryObj = categories.find(c => c.id === currentCategory);
+      if (categoryObj && categoryObj.filter.propertyId && categoryObj.filter.value !== undefined) {
+        properties[categoryObj.filter.propertyId] = categoryObj.filter.value;
+        // If the category filter is for tags, add to tags array
+        if (categoryObj.filter.propertyId === 'tags') {
+          properties.tags = Array.isArray(properties.tags)
+            ? [...properties.tags, categoryObj.filter.value]
+            : [categoryObj.filter.value];
+        }
+      }
+    }
     const newTask = addTask({
       title: '',
       completed: false,
-      properties: { dueDate: dateString },
+      properties,
     });
     setAutoFocusTaskId(newTask.id);
   };
