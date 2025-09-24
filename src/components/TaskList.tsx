@@ -14,12 +14,14 @@ export const TaskList: React.FC = () => {
   // Helper: get default tag for current category (if tag-filtered)
   const currentCategoryObj = categories.find(c => c.id === currentCategory);
   const defaultTag =
-    currentCategoryObj &&
-    currentCategoryObj.filter &&
-    currentCategoryObj.filter.propertyId === 'tags' &&
-    typeof currentCategoryObj.filter.value === 'string'
-      ? currentCategoryObj.filter.value
-      : undefined;
+    currentCategory === 'urgent'
+      ? undefined
+      : currentCategoryObj &&
+        currentCategoryObj.filter &&
+        currentCategoryObj.filter.propertyId === 'tags' &&
+        typeof currentCategoryObj.filter.value === 'string'
+        ? currentCategoryObj.filter.value
+        : undefined;
 
   // Show correct header for built-in categories
   let currentCategoryName = 'All Tasks';
@@ -108,7 +110,11 @@ export const TaskList: React.FC = () => {
 
   const handleCreateTaskAfter = useCallback((afterTaskId: string, title: string = '', parentId?: string) => {
     const properties: Record<string, any> = {};
-    if (defaultTag) properties.tags = [defaultTag];
+    if (currentCategory === 'urgent') {
+      properties.priority = 'Urgent';
+    } else if (defaultTag) {
+      properties.tags = [defaultTag];
+    }
     const newTask = addTaskAfter({
       title: title || '',
       parentId,
@@ -293,7 +299,11 @@ export const TaskList: React.FC = () => {
               className="flex items-center gap-2 py-2 cursor-text text-muted-foreground/60"
               onClick={() => {
                 const properties: Record<string, any> = {};
-                if (defaultTag) properties.tags = [defaultTag];
+                if (currentCategory === 'urgent') {
+                  properties.priority = 'Urgent';
+                } else if (defaultTag) {
+                  properties.tags = [defaultTag];
+                }
                 const newTask = addTask({
                   title: '',
                   properties,

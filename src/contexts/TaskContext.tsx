@@ -48,6 +48,23 @@ export const useTaskContext = () => {
 };
 
 export const TaskProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  // Remove completed tasks older than 2 weeks
+  useEffect(() => {
+    const now = new Date();
+    const twoWeeksMs = 14 * 24 * 60 * 60 * 1000;
+    setTasks(prevTasks => {
+      const filtered = prevTasks.filter(task => {
+        if (!task.completed) return true;
+        if (!task.updatedAt) return true;
+        const updatedAt = new Date(task.updatedAt);
+        return now.getTime() - updatedAt.getTime() < twoWeeksMs;
+      });
+      if (filtered.length !== prevTasks.length) {
+        autoSave({ tasks: filtered });
+      }
+      return filtered;
+    });
+  }, []);
   const [user, setUser] = useState({ name: 'Lia', email: 'lia@example.com' });
   const [tasks, setTasks] = useState<Task[]>([]);
   const [properties, setProperties] = useState<TaskProperty[]>([]);

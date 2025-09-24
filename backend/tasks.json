@@ -1,33 +1,6 @@
 {
   "tasks": [
     {
-      "title": "homework on capacitors",
-      "properties": {
-        "dueDate": "2025-09-15",
-        "tags": [
-          "school"
-        ],
-        "priority": "Urgent"
-      },
-      "completed": false,
-      "id": "1757778011314",
-      "createdAt": "2025-09-13T15:40:11.314Z",
-      "updatedAt": "2025-09-13T16:50:32.273Z"
-    },
-    {
-      "title": "study for bio ft",
-      "properties": {
-        "tags": [
-          "school"
-        ],
-        "priority": "Urgent"
-      },
-      "completed": false,
-      "id": "1757778773529",
-      "createdAt": "2025-09-13T15:52:53.529Z",
-      "updatedAt": "2025-09-13T19:28:09.867Z"
-    },
-    {
       "title": "wuwa grind",
       "properties": {},
       "completed": false,
@@ -36,7 +9,7 @@
       "updatedAt": "2025-09-13T16:05:55.818Z"
     },
     {
-      "title": "study for math quiz",
+      "title": "study for phy quiz",
       "properties": {
         "tags": [
           "school"
@@ -46,7 +19,7 @@
       "completed": false,
       "id": "1757779754371",
       "createdAt": "2025-09-13T16:09:14.371Z",
-      "updatedAt": "2025-09-13T19:28:15.392Z"
+      "updatedAt": "2025-09-23T04:40:59.576Z"
     },
     {
       "title": "study for chinese quiz",
@@ -157,10 +130,10 @@
           "uni apps"
         ]
       },
-      "completed": false,
+      "completed": true,
       "id": "1757791935701",
       "createdAt": "2025-09-13T19:32:15.701Z",
-      "updatedAt": "2025-09-13T19:33:16.604Z"
+      "updatedAt": "2025-09-22T19:32:49.786Z"
     },
     {
       "title": "HK",
@@ -384,6 +357,317 @@
       "id": "1757792651126",
       "createdAt": "2025-09-13T19:44:11.126Z",
       "updatedAt": "2025-09-13T19:44:12.157Z"
+    },
+    {
+      "title": "m2 paper",
+      "completed": true,
+      "properties": {
+        "dueDate": "2025-09-18",
+        "tags": [
+          "school"
+        ]
+      },
+      "id": "1758102335617",
+      "createdAt": "2025-09-17T09:45:35.617Z",
+      "updatedAt": "2025-09-20T09:18:45.582Z"
+    },
+    {
+      "title": "linkedin post on tasktion",
+      "properties": {
+        "tags": [
+          "projects"
+        ]
+      },
+      "completed": true,
+      "id": "1758109490628",
+      "createdAt": "2025-09-17T11:44:50.628Z",
+      "updatedAt": "2025-09-19T13:32:49.802Z"
+    },
+    {
+      "title": "make it so i can add filter on calendar view and create projects with the selected date and filter directly ! ",
+      "properties": {
+        "tags": [
+          "projects"
+        ]
+      },
+      "completed": true,
+      "id": "1758109521848",
+      "createdAt": "2025-09-17T11:45:21.848Z",
+      "updatedAt": "2025-09-19T13:32:52.410Z"
+    },
+    {
+      "title": "make new instagram post",
+      "properties": {
+        "tags": [
+          "jstu"
+        ]
+      },
+      "completed": true,
+      "id": "1758289725384",
+      "createdAt": "2025-09-19T13:48:45.384Z",
+      "updatedAt": "2025-09-20T09:17:38.011Z"
+    },
+    {
+      "title": "5c notes in ft syl",
+      "completed": true,
+      "properties": {
+        "dueDate": "2025-09-20",
+        "tags": [
+          "school"
+        ]
+      },
+      "id": "1758102295612",
+      "createdAt": "2025-09-17T09:44:55.612Z",
+      "updatedAt": "2025-09-20T09:18:56.703Z",
+      "parentId": "1758359782027"
+    },
+    {
+      "title": "gizmo",
+      "completed": false,
+      "properties": {
+        "dueDate": "2025-09-18",
+        "tags": [
+          "school"
+        ]
+      },
+      "id": "1758102313809",
+      "createdAt": "2025-09-17T09:45:13.809Z",
+      "updatedAt": "2025-09-20T09:18:04.959Z",
+      "parentId": "1758359782027"
+    },
+    {
+      "title": "CV Update",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ]
+      },
+      "completed": true,
+      "id": "1758359723981",
+      "createdAt": "2025-09-20T09:15:23.981Z",
+      "updatedAt": "2025-09-20T09:15:31.359Z"
+    },
+    {
+      "title": "PS",
+      "parentId": "1757792000036",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ],
+        "priority": "Urgent",
+        "dueDate": "2025-09-25"
+      },
+      "completed": false,
+      "id": "1758359738171",
+      "createdAt": "2025-09-20T09:15:38.171Z",
+      "updatedAt": "2025-09-20T09:19:31.475Z"
+    },
+    {
+      "title": "PS",
+      "parentId": "1757792008291",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ],
+        "priority": "Urgent",
+        "dueDate": "2025-09-25"
+      },
+      "completed": true,
+      "id": "1758359741864",
+      "createdAt": "2025-09-20T09:15:41.864Z",
+      "updatedAt": "2025-09-23T21:28:36.311Z"
+    },
+    {
+      "title": "PS",
+      "parentId": "1757792009284",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ],
+        "priority": "Urgent",
+        "dueDate": "2025-09-25"
+      },
+      "completed": false,
+      "id": "1758359744033",
+      "createdAt": "2025-09-20T09:15:44.033Z",
+      "updatedAt": "2025-09-20T09:19:41.710Z"
+    },
+    {
+      "title": "PS",
+      "parentId": "1757792010387",
+      "properties": {
+        "tags": [
+          "uni apps"
+        ],
+        "priority": "Urgent",
+        "dueDate": "2025-09-25"
+      },
+      "completed": false,
+      "id": "1758359746548",
+      "createdAt": "2025-09-20T09:15:46.548Z",
+      "updatedAt": "2025-09-20T09:19:45.805Z"
+    },
+    {
+      "title": "5b supp ex",
+      "completed": true,
+      "properties": {
+        "dueDate": "2025-09-17",
+        "tags": [
+          "school"
+        ]
+      },
+      "id": "1758102314957",
+      "createdAt": "2025-09-17T09:45:14.957Z",
+      "updatedAt": "2025-09-20T09:18:10.139Z",
+      "parentId": "1758359782027"
+    },
+    {
+      "title": "5b peq",
+      "completed": true,
+      "properties": {
+        "dueDate": "2025-09-18",
+        "tags": [
+          "school"
+        ]
+      },
+      "id": "1758102319970",
+      "createdAt": "2025-09-17T09:45:19.970Z",
+      "updatedAt": "2025-09-20T09:18:14.724Z",
+      "parentId": "1758359782027"
+    },
+    {
+      "title": "5b savemyexams",
+      "completed": true,
+      "properties": {
+        "dueDate": "2025-09-21",
+        "tags": [
+          "school"
+        ]
+      },
+      "id": "1758102323295",
+      "createdAt": "2025-09-17T09:45:23.295Z",
+      "updatedAt": "2025-09-22T19:32:39.074Z",
+      "parentId": "1758359782027"
+    },
+    {
+      "title": "5c savemyexams",
+      "parentId": "1758359782027",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": true,
+      "id": "1758359823952",
+      "createdAt": "2025-09-20T09:17:03.952Z",
+      "updatedAt": "2025-09-22T19:32:39.929Z"
+    },
+    {
+      "title": "5c supp ex",
+      "parentId": "1758359782027",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": true,
+      "id": "1758359829152",
+      "createdAt": "2025-09-20T09:17:09.152Z",
+      "updatedAt": "2025-09-20T09:18:20.001Z"
+    },
+    {
+      "title": "5c peq",
+      "parentId": "1758359782027",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": true,
+      "id": "1758359832370",
+      "createdAt": "2025-09-20T09:17:12.370Z",
+      "updatedAt": "2025-09-20T09:18:23.922Z"
+    },
+    {
+      "title": "questions by topic",
+      "parentId": "1757779754371",
+      "properties": {
+        "tags": [
+          "school"
+        ],
+        "priority": "Urgent"
+      },
+      "completed": true,
+      "id": "1758569494235",
+      "createdAt": "2025-09-22T19:31:34.235Z",
+      "updatedAt": "2025-09-23T04:40:24.547Z"
+    },
+    {
+      "title": "ocr",
+      "parentId": "1757779754371",
+      "properties": {
+        "tags": [
+          "school"
+        ],
+        "priority": "Urgent"
+      },
+      "completed": true,
+      "id": "1758569499995",
+      "createdAt": "2025-09-22T19:31:39.995Z",
+      "updatedAt": "2025-09-23T04:40:30.540Z"
+    },
+    {
+      "title": "aqa",
+      "parentId": "1757779754371",
+      "properties": {
+        "tags": [
+          "school"
+        ],
+        "priority": "Urgent"
+      },
+      "completed": false,
+      "id": "1758569501128",
+      "createdAt": "2025-09-22T19:31:41.128Z",
+      "updatedAt": "2025-09-23T04:40:35.232Z"
+    },
+    {
+      "title": "notes",
+      "parentId": "1757779754371",
+      "properties": {
+        "tags": [
+          "school"
+        ],
+        "priority": "Urgent"
+      },
+      "completed": true,
+      "id": "1758569501997",
+      "createdAt": "2025-09-22T19:31:41.997Z",
+      "updatedAt": "2025-09-23T04:40:40.401Z"
+    },
+    {
+      "title": "questions on capacitors",
+      "parentId": "1757779754371",
+      "properties": {
+        "tags": [
+          "school"
+        ],
+        "priority": "Urgent"
+      },
+      "completed": false,
+      "id": "1758569508280",
+      "createdAt": "2025-09-22T19:31:48.280Z",
+      "updatedAt": "2025-09-23T04:40:45.524Z"
+    },
+    {
+      "title": "fix ted ed financial statements",
+      "parentId": "1758359782027",
+      "properties": {
+        "priority": "Urgent"
+      },
+      "completed": true,
+      "id": "1758602484310",
+      "createdAt": "2025-09-23T04:41:24.310Z",
+      "updatedAt": "2025-09-23T04:41:37.377Z"
     }
   ],
   "categories": [
@@ -422,6 +706,15 @@
         "value": "projects"
       },
       "id": "1757792577443"
+    },
+    {
+      "name": "jstu",
+      "icon": "Hash",
+      "filter": {
+        "propertyId": "tags",
+        "value": "jstu"
+      },
+      "id": "1758359855266"
     }
   ]
 }
