@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-
-const TASKS_URL = 'http://localhost:4000/api/tasks';
-const CATEGORIES_URL = 'http://localhost:4000/api/categories';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const TASKS_URL = `${API_BASE}/api/tasks`;
+const CATEGORIES_URL = `${API_BASE}/api/categories`;
 
 export const api = {
   async getTasks(): Promise<any[]> {
