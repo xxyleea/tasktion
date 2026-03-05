@@ -1,217 +1,6 @@
 {
   "tasks": [
     {
-      "title": "wuwa grind",
-      "properties": {},
-      "completed": false,
-      "id": "1757779552562",
-      "createdAt": "2025-09-13T16:05:52.562Z",
-      "updatedAt": "2025-09-13T16:05:55.818Z"
-    },
-    {
-      "title": "study for phy quiz",
-      "properties": {
-        "tags": [
-          "school"
-        ],
-        "priority": "Urgent"
-      },
-      "completed": false,
-      "id": "1757779754371",
-      "createdAt": "2025-09-13T16:09:14.371Z",
-      "updatedAt": "2025-09-23T04:40:59.576Z"
-    },
-    {
-      "title": "study for chinese quiz",
-      "properties": {
-        "tags": [
-          "school"
-        ],
-        "priority": "Urgent"
-      },
-      "completed": false,
-      "id": "1757791266784",
-      "createdAt": "2025-09-13T19:21:06.784Z",
-      "updatedAt": "2025-09-13T19:28:20.577Z"
-    },
-    {
-      "title": "SES application",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757791735132",
-      "createdAt": "2025-09-13T19:28:55.132Z",
-      "updatedAt": "2025-09-13T19:29:20.853Z"
-    },
-    {
-      "title": "US",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757791794672",
-      "createdAt": "2025-09-13T19:29:54.672Z",
-      "updatedAt": "2025-09-13T19:29:56.090Z"
-    },
-    {
-      "title": "Stanford",
-      "parentId": "1757791794672",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757791796235",
-      "createdAt": "2025-09-13T19:29:56.235Z",
-      "updatedAt": "2025-09-13T19:29:57.780Z"
-    },
-    {
-      "title": "Berkley",
-      "parentId": "1757791794672",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757791810416",
-      "createdAt": "2025-09-13T19:30:10.416Z",
-      "updatedAt": "2025-09-13T19:30:11.506Z"
-    },
-    {
-      "title": "Dartmouth",
-      "parentId": "1757791794672",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757791811703",
-      "createdAt": "2025-09-13T19:30:11.703Z",
-      "updatedAt": "2025-09-13T19:30:13.216Z"
-    },
-    {
-      "title": "UK",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757791813437",
-      "createdAt": "2025-09-13T19:30:13.437Z",
-      "updatedAt": "2025-09-13T19:30:16.921Z"
-    },
-    {
-      "title": "UCAS personal statement fix",
-      "parentId": "1757791813437",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": true,
-      "id": "1757791817513",
-      "createdAt": "2025-09-13T19:30:17.513Z",
-      "updatedAt": "2025-09-13T19:30:24.380Z"
-    },
-    {
-      "title": "finish UCAS application",
-      "parentId": "1757791813437",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": true,
-      "id": "1757791935701",
-      "createdAt": "2025-09-13T19:32:15.701Z",
-      "updatedAt": "2025-09-22T19:32:49.786Z"
-    },
-    {
-      "title": "HK",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757791996755",
-      "createdAt": "2025-09-13T19:33:16.755Z",
-      "updatedAt": "2025-09-13T19:33:19.556Z"
-    },
-    {
-      "title": "PolyU",
-      "parentId": "1757791996755",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757792000036",
-      "createdAt": "2025-09-13T19:33:20.036Z",
-      "updatedAt": "2025-09-13T19:33:27.994Z"
-    },
-    {
-      "title": "HKU",
-      "parentId": "1757791996755",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757792008291",
-      "createdAt": "2025-09-13T19:33:28.291Z",
-      "updatedAt": "2025-09-13T19:33:28.929Z"
-    },
-    {
-      "title": "CU",
-      "parentId": "1757791996755",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757792009284",
-      "createdAt": "2025-09-13T19:33:29.284Z",
-      "updatedAt": "2025-09-13T19:33:30.011Z"
-    },
-    {
-      "title": "HKUST",
-      "parentId": "1757791996755",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757792010387",
-      "createdAt": "2025-09-13T19:33:30.387Z",
-      "updatedAt": "2025-09-13T19:33:39.686Z"
-    },
-    {
-      "title": "Australia",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757792036631",
-      "createdAt": "2025-09-13T19:33:56.631Z",
-      "updatedAt": "2025-09-13T19:34:08.989Z"
-    },
-    {
       "title": "UNSW",
       "parentId": "1757792036631",
       "properties": {
@@ -222,23 +11,10 @@
       "completed": false,
       "id": "1757792044024",
       "createdAt": "2025-09-13T19:34:04.024Z",
-      "updatedAt": "2025-09-13T19:34:16.235Z"
+      "updatedAt": "2025-12-01T10:29:56.882Z"
     },
     {
-      "title": "email them to ask if i can use predicted",
-      "parentId": "1757792044024",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ]
-      },
-      "completed": false,
-      "id": "1757792058903",
-      "createdAt": "2025-09-13T19:34:18.903Z",
-      "updatedAt": "2025-09-13T19:34:24.562Z"
-    },
-    {
-      "title": "figure out scholarship",
+      "title": "apply scholarship",
       "parentId": "1757792044024",
       "properties": {
         "tags": [
@@ -248,426 +24,429 @@
       "completed": false,
       "id": "1757792064693",
       "createdAt": "2025-09-13T19:34:24.693Z",
-      "updatedAt": "2025-09-13T19:34:27.343Z"
+      "updatedAt": "2025-12-01T10:30:02.500Z"
     },
     {
-      "title": "revamp my notion",
+      "title": "apply ",
+      "parentId": "1757792044024",
       "properties": {
         "tags": [
-          "personal"
+          "uni apps"
         ]
       },
       "completed": false,
-      "id": "1757792230425",
-      "createdAt": "2025-09-13T19:37:10.425Z",
-      "updatedAt": "2025-09-13T19:37:31.659Z"
+      "id": "1764584997031",
+      "createdAt": "2025-12-01T10:29:57.031Z",
+      "updatedAt": "2025-12-01T10:31:31.826Z"
     },
     {
-      "title": "finances",
-      "properties": {
-        "tags": [
-          "personal"
-        ]
-      },
-      "completed": false,
-      "id": "1757792295848",
-      "createdAt": "2025-09-13T19:38:15.848Z",
-      "updatedAt": "2025-09-13T19:38:23.619Z"
-    },
-    {
-      "title": "shopping list",
-      "properties": {
-        "tags": [
-          "personal"
-        ]
-      },
-      "completed": false,
-      "id": "1757792297782",
-      "createdAt": "2025-09-13T19:38:17.782Z",
-      "updatedAt": "2025-09-13T19:38:25.958Z"
-    },
-    {
-      "title": "iphone fix",
-      "properties": {
-        "tags": [
-          "personal"
-        ]
-      },
-      "completed": false,
-      "id": "1757792306458",
-      "createdAt": "2025-09-13T19:38:26.458Z",
-      "updatedAt": "2025-09-13T19:38:28.632Z"
-    },
-    {
-      "title": "laptop fix",
-      "properties": {
-        "tags": [
-          "personal"
-        ]
-      },
-      "completed": false,
-      "id": "1757792308749",
-      "createdAt": "2025-09-13T19:38:28.749Z",
-      "updatedAt": "2025-09-13T19:38:29.858Z"
-    },
-    {
-      "title": "ipad fix",
-      "properties": {
-        "tags": [
-          "personal"
-        ]
-      },
-      "completed": false,
-      "id": "1757792310149",
-      "createdAt": "2025-09-13T19:38:30.149Z",
-      "updatedAt": "2025-09-13T19:38:31.429Z"
-    },
-    {
-      "title": "clean my room </3",
-      "properties": {
-        "tags": [
-          "personal"
-        ]
-      },
-      "completed": false,
-      "id": "1757792311559",
-      "createdAt": "2025-09-13T19:38:31.559Z",
-      "updatedAt": "2025-09-13T19:38:35.214Z"
-    },
-    {
-      "title": "tasktion",
-      "properties": {
-        "tags": [
-          "projects"
-        ]
-      },
-      "completed": false,
-      "id": "1757792539488",
-      "createdAt": "2025-09-13T19:42:19.488Z",
-      "updatedAt": "2025-09-13T19:42:34.180Z"
-    },
-    {
-      "title": "coursera",
-      "properties": {
-        "tags": [
-          "projects"
-        ]
-      },
-      "completed": false,
-      "id": "1757792651126",
-      "createdAt": "2025-09-13T19:44:11.126Z",
-      "updatedAt": "2025-09-13T19:44:12.157Z"
-    },
-    {
-      "title": "m2 paper",
+      "title": "submit cuhk",
       "completed": true,
       "properties": {
-        "dueDate": "2025-09-18",
-        "tags": [
-          "school"
-        ]
+        "dueDate": "2026-01-05"
       },
-      "id": "1758102335617",
-      "createdAt": "2025-09-17T09:45:35.617Z",
-      "updatedAt": "2025-09-20T09:18:45.582Z"
+      "id": "1767605663158",
+      "createdAt": "2026-01-05T09:34:23.158Z",
+      "updatedAt": "2026-01-05T12:48:24.241Z"
     },
     {
-      "title": "linkedin post on tasktion",
+      "title": "fill in teams for after submitting cuhk",
+      "completed": true,
+      "properties": {
+        "dueDate": "2026-01-05"
+      },
+      "id": "1767605666598",
+      "createdAt": "2026-01-05T09:34:26.598Z",
+      "updatedAt": "2026-01-05T12:48:25.057Z"
+    },
+    {
+      "title": "print and get parents letter signed",
+      "completed": true,
+      "properties": {
+        "dueDate": "2026-01-05"
+      },
+      "id": "1767605675824",
+      "createdAt": "2026-01-05T09:34:35.824Z",
+      "updatedAt": "2026-01-07T06:47:01.738Z"
+    },
+    {
+      "title": "ask mom if i can get dinner w oscar and keenan tmr",
+      "completed": true,
+      "properties": {
+        "dueDate": "2026-01-05"
+      },
+      "id": "1767605679377",
+      "createdAt": "2026-01-05T09:34:39.377Z",
+      "updatedAt": "2026-01-05T12:48:22.609Z"
+    },
+    {
+      "title": "bio pastpaper fin",
+      "completed": true,
+      "properties": {
+        "dueDate": "2026-01-05"
+      },
+      "id": "1767605690174",
+      "createdAt": "2026-01-05T09:34:50.174Z",
+      "updatedAt": "2026-01-05T12:48:20.093Z"
+    },
+    {
+      "title": "bio pastpaper",
+      "completed": true,
+      "properties": {
+        "dueDate": "2026-01-05"
+      },
+      "id": "1767605692006",
+      "createdAt": "2026-01-05T09:34:52.006Z",
+      "updatedAt": "2026-01-05T12:48:19.163Z"
+    },
+    {
+      "title": "m3 notes ",
+      "completed": false,
+      "properties": {
+        "dueDate": "2026-01-07"
+      },
+      "id": "1767768437402",
+      "createdAt": "2026-01-07T06:47:17.402Z",
+      "updatedAt": "2026-01-07T06:47:24.447Z"
+    },
+    {
+      "title": "phy pastpaper",
+      "completed": false,
+      "properties": {
+        "dueDate": "2026-01-07"
+      },
+      "id": "1767768444874",
+      "createdAt": "2026-01-07T06:47:24.874Z",
+      "updatedAt": "2026-01-07T06:47:27.131Z"
+    },
+    {
+      "title": "unsw scholarship application",
       "properties": {
         "tags": [
-          "projects"
+          "uni apps"
         ]
       },
-      "completed": true,
-      "id": "1758109490628",
-      "createdAt": "2025-09-17T11:44:50.628Z",
-      "updatedAt": "2025-09-19T13:32:49.802Z"
+      "completed": false,
+      "id": "1772299344765",
+      "createdAt": "2026-02-28T17:22:24.765Z",
+      "updatedAt": "2026-02-28T17:22:30.951Z"
     },
     {
-      "title": "make it so i can add filter on calendar view and create projects with the selected date and filter directly ! ",
-      "properties": {
-        "tags": [
-          "projects"
-        ]
-      },
-      "completed": true,
-      "id": "1758109521848",
-      "createdAt": "2025-09-17T11:45:21.848Z",
-      "updatedAt": "2025-09-19T13:32:52.410Z"
-    },
-    {
-      "title": "make new instagram post",
+      "title": "schedule call with rey!!!",
       "properties": {
         "tags": [
           "jstu"
         ]
       },
-      "completed": true,
-      "id": "1758289725384",
-      "createdAt": "2025-09-19T13:48:45.384Z",
-      "updatedAt": "2025-09-20T09:17:38.011Z"
-    },
-    {
-      "title": "5c notes in ft syl",
-      "completed": true,
-      "properties": {
-        "dueDate": "2025-09-20",
-        "tags": [
-          "school"
-        ]
-      },
-      "id": "1758102295612",
-      "createdAt": "2025-09-17T09:44:55.612Z",
-      "updatedAt": "2025-09-20T09:18:56.703Z",
-      "parentId": "1758359782027"
-    },
-    {
-      "title": "gizmo",
       "completed": false,
-      "properties": {
-        "dueDate": "2025-09-18",
-        "tags": [
-          "school"
-        ]
-      },
-      "id": "1758102313809",
-      "createdAt": "2025-09-17T09:45:13.809Z",
-      "updatedAt": "2025-09-20T09:18:04.959Z",
-      "parentId": "1758359782027"
+      "id": "1772299370219",
+      "createdAt": "2026-02-28T17:22:50.219Z",
+      "updatedAt": "2026-02-28T17:22:54.005Z"
     },
     {
-      "title": "CV Update",
+      "title": "schedule 2nd call w rey  + maybe raymond + darren there",
       "properties": {
         "tags": [
-          "uni apps"
+          "jstu"
         ]
-      },
-      "completed": true,
-      "id": "1758359723981",
-      "createdAt": "2025-09-20T09:15:23.981Z",
-      "updatedAt": "2025-09-20T09:15:31.359Z"
-    },
-    {
-      "title": "PS",
-      "parentId": "1757792000036",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ],
-        "priority": "Urgent",
-        "dueDate": "2025-09-25"
       },
       "completed": false,
-      "id": "1758359738171",
-      "createdAt": "2025-09-20T09:15:38.171Z",
-      "updatedAt": "2025-09-20T09:19:31.475Z"
+      "id": "1772299374181",
+      "createdAt": "2026-02-28T17:22:54.181Z",
+      "updatedAt": "2026-03-01T08:24:34.338Z"
     },
     {
-      "title": "PS",
-      "parentId": "1757792008291",
+      "title": "post about typhoonhacks on linkedin (my own acc)",
       "properties": {
         "tags": [
-          "uni apps"
-        ],
-        "priority": "Urgent",
-        "dueDate": "2025-09-25"
-      },
-      "completed": true,
-      "id": "1758359741864",
-      "createdAt": "2025-09-20T09:15:41.864Z",
-      "updatedAt": "2025-09-23T21:28:36.311Z"
-    },
-    {
-      "title": "PS",
-      "parentId": "1757792009284",
-      "properties": {
-        "tags": [
-          "uni apps"
-        ],
-        "priority": "Urgent",
-        "dueDate": "2025-09-25"
+          "jstu"
+        ]
       },
       "completed": false,
-      "id": "1758359744033",
-      "createdAt": "2025-09-20T09:15:44.033Z",
-      "updatedAt": "2025-09-20T09:19:41.710Z"
+      "id": "1772299380365",
+      "createdAt": "2026-02-28T17:23:00.365Z",
+      "updatedAt": "2026-02-28T17:23:10.347Z"
     },
     {
-      "title": "PS",
-      "parentId": "1757792010387",
+      "title": "blow anson reel post",
       "properties": {
         "tags": [
-          "uni apps"
-        ],
-        "priority": "Urgent",
-        "dueDate": "2025-09-25"
+          "jstu"
+        ]
       },
       "completed": false,
-      "id": "1758359746548",
-      "createdAt": "2025-09-20T09:15:46.548Z",
-      "updatedAt": "2025-09-20T09:19:45.805Z"
+      "id": "1772299390568",
+      "createdAt": "2026-02-28T17:23:10.568Z",
+      "updatedAt": "2026-02-28T17:23:13.199Z"
     },
     {
-      "title": "5b supp ex",
-      "completed": true,
+      "title": "blow emma post",
       "properties": {
-        "dueDate": "2025-09-17",
         "tags": [
-          "school"
+          "jstu"
         ]
-      },
-      "id": "1758102314957",
-      "createdAt": "2025-09-17T09:45:14.957Z",
-      "updatedAt": "2025-09-20T09:18:10.139Z",
-      "parentId": "1758359782027"
-    },
-    {
-      "title": "5b peq",
-      "completed": true,
-      "properties": {
-        "dueDate": "2025-09-18",
-        "tags": [
-          "school"
-        ]
-      },
-      "id": "1758102319970",
-      "createdAt": "2025-09-17T09:45:19.970Z",
-      "updatedAt": "2025-09-20T09:18:14.724Z",
-      "parentId": "1758359782027"
-    },
-    {
-      "title": "5b savemyexams",
-      "completed": true,
-      "properties": {
-        "dueDate": "2025-09-21",
-        "tags": [
-          "school"
-        ]
-      },
-      "id": "1758102323295",
-      "createdAt": "2025-09-17T09:45:23.295Z",
-      "updatedAt": "2025-09-22T19:32:39.074Z",
-      "parentId": "1758359782027"
-    },
-    {
-      "title": "5c savemyexams",
-      "parentId": "1758359782027",
-      "properties": {
-        "tags": [
-          "school"
-        ]
-      },
-      "completed": true,
-      "id": "1758359823952",
-      "createdAt": "2025-09-20T09:17:03.952Z",
-      "updatedAt": "2025-09-22T19:32:39.929Z"
-    },
-    {
-      "title": "5c supp ex",
-      "parentId": "1758359782027",
-      "properties": {
-        "tags": [
-          "school"
-        ]
-      },
-      "completed": true,
-      "id": "1758359829152",
-      "createdAt": "2025-09-20T09:17:09.152Z",
-      "updatedAt": "2025-09-20T09:18:20.001Z"
-    },
-    {
-      "title": "5c peq",
-      "parentId": "1758359782027",
-      "properties": {
-        "tags": [
-          "school"
-        ]
-      },
-      "completed": true,
-      "id": "1758359832370",
-      "createdAt": "2025-09-20T09:17:12.370Z",
-      "updatedAt": "2025-09-20T09:18:23.922Z"
-    },
-    {
-      "title": "questions by topic",
-      "parentId": "1757779754371",
-      "properties": {
-        "tags": [
-          "school"
-        ],
-        "priority": "Urgent"
-      },
-      "completed": true,
-      "id": "1758569494235",
-      "createdAt": "2025-09-22T19:31:34.235Z",
-      "updatedAt": "2025-09-23T04:40:24.547Z"
-    },
-    {
-      "title": "ocr",
-      "parentId": "1757779754371",
-      "properties": {
-        "tags": [
-          "school"
-        ],
-        "priority": "Urgent"
-      },
-      "completed": true,
-      "id": "1758569499995",
-      "createdAt": "2025-09-22T19:31:39.995Z",
-      "updatedAt": "2025-09-23T04:40:30.540Z"
-    },
-    {
-      "title": "aqa",
-      "parentId": "1757779754371",
-      "properties": {
-        "tags": [
-          "school"
-        ],
-        "priority": "Urgent"
       },
       "completed": false,
-      "id": "1758569501128",
-      "createdAt": "2025-09-22T19:31:41.128Z",
-      "updatedAt": "2025-09-23T04:40:35.232Z"
+      "id": "1772299393240",
+      "createdAt": "2026-02-28T17:23:13.240Z",
+      "updatedAt": "2026-02-28T17:23:15.173Z"
+    },
+    {
+      "title": "blow darren linkedin post",
+      "properties": {
+        "tags": [
+          "jstu"
+        ]
+      },
+      "completed": false,
+      "id": "1772299395369",
+      "createdAt": "2026-02-28T17:23:15.369Z",
+      "updatedAt": "2026-02-28T17:23:19.012Z"
+    },
+    {
+      "title": "mocks",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299451706",
+      "createdAt": "2026-02-28T17:24:11.706Z",
+      "updatedAt": "2026-02-28T17:24:13.128Z"
+    },
+    {
+      "title": "bio",
+      "parentId": "1772299451706",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299453228",
+      "createdAt": "2026-02-28T17:24:13.228Z",
+      "updatedAt": "2026-02-28T17:24:36.463Z"
     },
     {
       "title": "notes",
-      "parentId": "1757779754371",
+      "parentId": "1772299453228",
       "properties": {
         "tags": [
           "school"
-        ],
-        "priority": "Urgent"
-      },
-      "completed": true,
-      "id": "1758569501997",
-      "createdAt": "2025-09-22T19:31:41.997Z",
-      "updatedAt": "2025-09-23T04:40:40.401Z"
-    },
-    {
-      "title": "questions on capacitors",
-      "parentId": "1757779754371",
-      "properties": {
-        "tags": [
-          "school"
-        ],
-        "priority": "Urgent"
+        ]
       },
       "completed": false,
-      "id": "1758569508280",
-      "createdAt": "2025-09-22T19:31:48.280Z",
-      "updatedAt": "2025-09-23T04:40:45.524Z"
+      "id": "1772299476629",
+      "createdAt": "2026-02-28T17:24:36.630Z",
+      "updatedAt": "2026-02-28T17:24:37.937Z"
     },
     {
-      "title": "fix ted ed financial statements",
-      "parentId": "1758359782027",
+      "title": "7c",
+      "parentId": "1772299476629",
       "properties": {
-        "priority": "Urgent"
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299478047",
+      "createdAt": "2026-02-28T17:24:38.047Z",
+      "updatedAt": "2026-02-28T17:24:39.244Z"
+    },
+    {
+      "title": "8a",
+      "parentId": "1772299476629",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299479469",
+      "createdAt": "2026-02-28T17:24:39.469Z",
+      "updatedAt": "2026-02-28T17:24:40.019Z"
+    },
+    {
+      "title": "8b",
+      "parentId": "1772299476629",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299480166",
+      "createdAt": "2026-02-28T17:24:40.166Z",
+      "updatedAt": "2026-02-28T17:24:40.919Z"
+    },
+    {
+      "title": "8c",
+      "parentId": "1772299476629",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299481143",
+      "createdAt": "2026-02-28T17:24:41.143Z",
+      "updatedAt": "2026-02-28T17:24:41.583Z"
+    },
+    {
+      "title": "peq + supp ex",
+      "parentId": "1772299453228",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299482353",
+      "createdAt": "2026-02-28T17:24:42.353Z",
+      "updatedAt": "2026-02-28T17:24:45.508Z"
+    },
+    {
+      "title": "phy",
+      "parentId": "1772299451706",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299485703",
+      "createdAt": "2026-02-28T17:24:45.703Z",
+      "updatedAt": "2026-02-28T17:24:46.944Z"
+    },
+    {
+      "title": "notes",
+      "parentId": "1772299485703",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299487131",
+      "createdAt": "2026-02-28T17:24:47.131Z",
+      "updatedAt": "2026-02-28T17:24:48.136Z"
+    },
+    {
+      "title": "shm",
+      "parentId": "1772299487131",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299489808",
+      "createdAt": "2026-02-28T17:24:49.808Z",
+      "updatedAt": "2026-02-28T17:25:08.328Z"
+    },
+    {
+      "title": "gravitation",
+      "parentId": "1772299487131",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299508427",
+      "createdAt": "2026-02-28T17:25:08.427Z",
+      "updatedAt": "2026-02-28T17:25:10.788Z"
+    },
+    {
+      "title": "astrophy",
+      "parentId": "1772299487131",
+      "properties": {
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": false,
+      "id": "1772299511024",
+      "createdAt": "2026-02-28T17:25:11.024Z",
+      "updatedAt": "2026-02-28T17:25:12.868Z"
+    },
+    {
+      "title": "algoverse",
+      "properties": {
+        "tags": [
+          "projects"
+        ]
+      },
+      "completed": false,
+      "id": "1772299562568",
+      "createdAt": "2026-02-28T17:26:02.568Z",
+      "updatedAt": "2026-02-28T17:26:03.851Z"
+    },
+    {
+      "title": "llm coding assignment ",
+      "parentId": "1772299562568",
+      "properties": {
+        "tags": [
+          "projects"
+        ],
+        "dueDate": "2026-03-02"
       },
       "completed": true,
-      "id": "1758602484310",
-      "createdAt": "2025-09-23T04:41:24.310Z",
-      "updatedAt": "2025-09-23T04:41:37.377Z"
+      "id": "1772299563949",
+      "createdAt": "2026-02-28T17:26:03.949Z",
+      "updatedAt": "2026-02-28T18:47:19.005Z"
+    },
+    {
+      "title": "intro to llm interpretability",
+      "parentId": "1772299562568",
+      "properties": {
+        "tags": [
+          "projects"
+        ]
+      },
+      "completed": false,
+      "id": "1772299671739",
+      "createdAt": "2026-02-28T17:27:51.739Z",
+      "updatedAt": "2026-02-28T17:28:05.058Z"
+    },
+    {
+      "title": " interpretability of vision models",
+      "parentId": "1772299562568",
+      "properties": {
+        "tags": [
+          "projects"
+        ]
+      },
+      "completed": false,
+      "id": "1772299673562",
+      "createdAt": "2026-02-28T17:27:53.562Z",
+      "updatedAt": "2026-03-01T08:28:53.256Z"
+    },
+    {
+      "title": "idp refund form",
+      "properties": {
+        "tags": [
+          "personal"
+        ]
+      },
+      "completed": false,
+      "id": "1772299698984",
+      "createdAt": "2026-02-28T17:28:18.984Z",
+      "updatedAt": "2026-02-28T17:28:20.893Z"
+    },
+    {
+      "title": "chinese rp3 form",
+      "properties": {
+        "priority": "Urgent",
+        "tags": [
+          "school"
+        ]
+      },
+      "completed": true,
+      "id": "1772299716433",
+      "createdAt": "2026-02-28T17:28:36.433Z",
+      "updatedAt": "2026-03-01T09:42:12.902Z"
     }
   ],
   "categories": [
@@ -715,6 +494,15 @@
         "value": "jstu"
       },
       "id": "1758359855266"
+    },
+    {
+      "name": "pastpapers",
+      "icon": "Flower",
+      "filter": {
+        "propertyId": "tags",
+        "value": "pastpapers"
+      },
+      "id": "1760940840776"
     }
   ]
 }
