@@ -4,8 +4,12 @@ const path = require('path');
 const cors = require('cors');
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const DATA_FILE = path.join(__dirname, 'tasks.json');
+
+// Serve built frontend
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
 
 app.use(cors());
 app.use(express.json());
@@ -88,6 +92,11 @@ app.delete('/api/categories/:id', (req, res) => {
   res.json({ success: true });
 });
 
+// Fallback to index.html for SPA routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(buildPath, 'index.html'));
+});
+
 app.listen(PORT, () => {
-  console.log(`Task backend running on http://localhost:${PORT}`);
+  console.log(`Task backend running on port ${PORT}`);
 });
